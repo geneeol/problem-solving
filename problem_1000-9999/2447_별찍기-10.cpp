@@ -4,16 +4,16 @@ using	namespace std;
 
 char	arr[2187][2187];
 
-void	draw_blank(int size, int x, int y)
+void	draw_blank(int size, int y, int x)
 {
 	int	i;
 	int	j;
 
-	i = x;
-	while (i < x + size)
+	i = y;
+	while (i < y + size)
 	{
-		j = y;
-		while (j < y + size)
+		j = x;
+		while (j < x + size)
 		{
 			arr[i][j] = ' ';
 			j++;
@@ -22,7 +22,7 @@ void	draw_blank(int size, int x, int y)
 	}
 }
 
-void	draw_map(int size, int x, int y)
+void	draw_map(int size, int y, int x)
 {
 	int	sector;
 	int	i;
@@ -31,15 +31,15 @@ void	draw_map(int size, int x, int y)
 	sector = 0;
 	if (size == 1)
 	{
-		arr[x][y] = '*';
+		arr[y][x] = '*';
 		return ;
 	}
 	size /= 3;
-	i = x;
-	while (i <= x + size * 2)
+	i = y;
+	while (i <= y + size * 2)
 	{
-		j = y;
-		while (j <= y + size * 2)
+		j = x;
+		while (j <= x + size * 2)
 		{
 			sector++;
 			if (sector == 5)
