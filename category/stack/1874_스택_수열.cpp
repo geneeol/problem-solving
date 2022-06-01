@@ -21,6 +21,9 @@ bool	is_stk_seq(void)
 	j = 0;
 	for (int i = 0; i < n; i++)
 	{
+		//팝 하기 전까지 계속 push
+		//string의 + 연산 이용시 간단. 
+		//코드 바킹독 코드가 훨씬 보기 좋음
 		for ( ; curr <= seq[i]; curr++, j++)
 		{
 			stk.push(curr);
