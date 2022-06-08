@@ -1,5 +1,6 @@
 #include <iostream>
 
+//코드가 조금 더러운듯..
 using namespace std;
 
 int	ft_dist(int N)
